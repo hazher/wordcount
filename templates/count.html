@@ -1,0 +1,16 @@
+<h1>there was {{ wordcount }} Words in your text!</h1>
+
+Your Text is: {{ fulltext }}
+<br/>
+<a href="{% url 'home' %}">Back to home!</a>
+
+<h1>
+    Analysing the inputed text:
+</h1>
+
+{% for word, count in word_dictionary %}
+
+{{ word }} 
+{{ count }}
+<br/>
+{% endfor %}
